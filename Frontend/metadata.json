@@ -1,0 +1,5 @@
+{
+  "name": "Digital Queue System (Front End)",
+  "description": "A front-end prototype of a digital queue management system. Users can take a ticket and check their status. An admin dashboard allows staff to manage the queue in either a single-stage or two-stage (room-based) mode.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+log.*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+.tmp/
+dist/
+build/
+.DS_Store
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.swp
+
+# OS files
+Thumbs.db
