@@ -1,26 +1,22 @@
 const API_BASE =
-  import.meta.env.VITE_API_BASE || "http://localhost:5000/ticket";
+  import.meta.env.VITE_API_BASE || "http://localhost:5000/api/tickets";
 
-// ✅ Create Ticket
+// Create Ticket
 export async function createTicket() {
   const res = await fetch(`${API_BASE}/create`, { method: "POST" });
   if (!res.ok) throw new Error("Create ticket failed");
   return res.json();
 }
 
-// ✅ Get All Tickets
+// Get All Tickets
 export async function getAllTickets() {
   const res = await fetch(`${API_BASE}`);
   if (!res.ok) throw new Error("Fetch tickets failed");
   return res.json();
 }
 
-// ✅ Update Ticket Status
-export async function updateTicketStatus(
-  id: string,
-  status: string,
-  room?: string
-) {
+// Update Ticket
+export async function updateTicketStatus(id: string, status: string, room?: string) {
   const res = await fetch(`${API_BASE}/${id}/status`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
@@ -30,7 +26,7 @@ export async function updateTicketStatus(
   return res.json();
 }
 
-// ✅ Reset Queue
+// Reset Queue
 export async function resetQueue() {
   const res = await fetch(`${API_BASE}/reset`, { method: "DELETE" });
   if (!res.ok) throw new Error("Reset failed");
